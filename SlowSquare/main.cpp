@@ -6,10 +6,22 @@
 //  Copyright © 2016 Brent Perry. All rights reserved.
 //
 
-#include <iostream>
+#include "../../../std_lib_facilities.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int slow_square(int x)
+{
+    int result = 0;
+    
+    
+    for (int i = 0; i < x; ++i)
+        result += x;
+    
+    return result;
+}
+
+int main()
+{
+    for (int i = 0; i < 100; ++i) {
+        cout << i << "\t" << slow_square(i) << "\n";
+    }
 }
